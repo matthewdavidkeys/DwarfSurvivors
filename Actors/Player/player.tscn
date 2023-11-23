@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyioae0t0ys65"]
 
 [ext_resource type="Script" path="res://Actors/Player/Player.gd" id="1_bfl67"]
-[ext_resource type="Texture2D" uid="uid://c711eq783rtxo" path="res://Assets/Sprites/icon.svg" id="2_gd55w"]
+[ext_resource type="Texture2D" uid="uid://c37ywel4jbsll" path="res://Assets/Sprites/Dwarf.png" id="2_hkycq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed7fc"]
 size = Vector2(67, 66)
@@ -12,9 +12,10 @@ collision_layer = 2
 script = ExtResource("1_bfl67")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
-scale = Vector2(0.554688, 0.554688)
-texture = ExtResource("2_gd55w")
+texture_filter = 1
+position = Vector2(-1.49999, 0.499992)
+scale = Vector2(8.375, 8.375)
+texture = ExtResource("2_hkycq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0)

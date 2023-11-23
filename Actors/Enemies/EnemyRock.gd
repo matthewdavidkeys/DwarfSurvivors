@@ -16,6 +16,6 @@ func _ready():
 	
 	pathfindComponent.select_target(target)
 
-func _process(delta):
+func _physics_process(delta):
 	pathfindComponent.follow_target()
 	velocityComponent.move(self)
