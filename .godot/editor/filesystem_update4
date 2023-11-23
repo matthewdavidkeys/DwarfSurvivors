@@ -1,7 +1,8 @@
 res://Worlds/main.tscn
-res://Components/Weapons/Pistol.tscn
 res://Components/WeaponComponents/FiringMechanism.tscn
-res://Components/WeaponComponents/Bullet.tscn
-res://Actors/Player/player.tscn
-res://Actors/Enemies/EnemyRock.tscn
-res://Actors/Enemies/EnemyRock.gd
+res://Components/WeaponComponents/ProjectileShooter.tscn
+res://Components/Weapons/Pistol.tscn
+res://Components/Weapons/Shotgun.tscn
+res://Components/Weapons/Shotgun.gd
+res://Components/WeaponComponents/ProjectileShooter.gd
+res://Components/Weapons/Pistol.gd

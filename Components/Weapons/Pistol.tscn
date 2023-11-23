@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccgalmnq60bh8"]
+[gd_scene load_steps=6 format=3 uid="uid://ccgalmnq60bh8"]
 
 [ext_resource type="PackedScene" uid="uid://cxfwpk75dppv" path="res://Components/WeaponComponents/TargetSelector.tscn" id="1_3ojhl"]
 [ext_resource type="Script" path="res://Components/Weapons/Pistol.gd" id="1_tm8yi"]
 [ext_resource type="Texture2D" uid="uid://cor6pu31f6bg4" path="res://Assets/Sprites/pistol.png" id="2_r88s1"]
-[ext_resource type="PackedScene" uid="uid://bw8q0satjqx57" path="res://Components/WeaponComponents/FiringMechanism.tscn" id="4_8ebo2"]
-[ext_resource type="PackedScene" uid="uid://c8ke0slknir2m" path="res://Components/WeaponComponents/Bullet.tscn" id="5_jqyh0"]
+[ext_resource type="PackedScene" uid="uid://cyp07sh6xsb7x" path="res://Components/WeaponComponents/ProjectileShooter.tscn" id="6_c3wbs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2tm6"]
 
@@ -24,9 +23,6 @@ shape = SubResource("RectangleShape2D_k2tm6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_r88s1")
 
-[node name="FiringMechanism" parent="." node_paths=PackedStringArray("targetSelector") instance=ExtResource("4_8ebo2")]
-bulletScene = ExtResource("5_jqyh0")
-targetSelector = NodePath("../TargetSelector")
+[node name="ProjectileShooter" parent="." instance=ExtResource("6_c3wbs")]
 
-[node name="FireDelayTimer" type="Timer" parent="FiringMechanism"]
-one_shot = true
+[node name="FireDelayTimer" type="Timer" parent="."]

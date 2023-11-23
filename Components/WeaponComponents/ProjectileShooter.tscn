@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyp07sh6xsb7x"]
+
+[ext_resource type="Script" path="res://Components/WeaponComponents/ProjectileShooter.gd" id="1_d3dl5"]
+[ext_resource type="PackedScene" uid="uid://c8ke0slknir2m" path="res://Components/WeaponComponents/Bullet.tscn" id="2_k447q"]
+
+[node name="ProjectileShooter" type="Node2D"]
+script = ExtResource("1_d3dl5")
+bulletScene = ExtResource("2_k447q")
+
+[node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true

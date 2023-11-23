@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwgp7838jou4m"]
+[gd_scene load_steps=5 format=3 uid="uid://dwgp7838jou4m"]
 
 [ext_resource type="Script" path="res://Components/Weapons/Shotgun.gd" id="1_2k0jb"]
 [ext_resource type="PackedScene" uid="uid://cxfwpk75dppv" path="res://Components/WeaponComponents/TargetSelector.tscn" id="2_pa23t"]
 [ext_resource type="Texture2D" uid="uid://c6dvuvmx7pbhl" path="res://Assets/Sprites/shotgun.png" id="3_od2e0"]
+[ext_resource type="PackedScene" uid="uid://cyp07sh6xsb7x" path="res://Components/WeaponComponents/ProjectileShooter.tscn" id="4_xk5gk"]
 
 [node name="Shotgun" type="Node2D"]
 script = ExtResource("1_2k0jb")
@@ -16,3 +17,8 @@ rangeCollider = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_od2e0")
+
+[node name="ProjectileShooter" parent="." instance=ExtResource("4_xk5gk")]
+
+[node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true
