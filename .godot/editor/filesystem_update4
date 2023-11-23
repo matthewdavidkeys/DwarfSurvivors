@@ -1,0 +1,4 @@
+res://Components/WeaponComponents/Bullet.tscn
+res://Worlds/main.tscn
+res://Components/Weapons/Pistol.tscn
+res://Components/WeaponComponents/FiringMechanism.tscn

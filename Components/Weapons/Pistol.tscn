@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccgalmnq60bh8"]
+
+[ext_resource type="PackedScene" uid="uid://cxfwpk75dppv" path="res://Components/WeaponComponents/TargetSelector.tscn" id="1_3ojhl"]
+[ext_resource type="Script" path="res://Components/Weapons/Pistol.gd" id="1_tm8yi"]
+[ext_resource type="Texture2D" uid="uid://cor6pu31f6bg4" path="res://Assets/Sprites/pistol.png" id="2_r88s1"]
+[ext_resource type="PackedScene" uid="uid://bw8q0satjqx57" path="res://Components/WeaponComponents/FiringMechanism.tscn" id="4_8ebo2"]
+[ext_resource type="PackedScene" uid="uid://c8ke0slknir2m" path="res://Components/WeaponComponents/Bullet.tscn" id="5_jqyh0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2tm6"]
+
+[node name="Pistol" type="Node2D"]
+script = ExtResource("1_tm8yi")
+
+[node name="TargetSelector" parent="." node_paths=PackedStringArray("rangeCollider") instance=ExtResource("1_3ojhl")]
+position = Vector2(1015.76, 335.857)
+rangeCollider = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="TargetSelector"]
+position = Vector2(-1015.76, -335.857)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSelector/Area2D"]
+shape = SubResource("RectangleShape2D_k2tm6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_r88s1")
+
+[node name="FiringMechanism" parent="." node_paths=PackedStringArray("targetSelector") instance=ExtResource("4_8ebo2")]
+bulletScene = ExtResource("5_jqyh0")
+targetSelector = NodePath("../TargetSelector")
+
+[node name="FireDelayTimer" type="Timer" parent="FiringMechanism"]
+one_shot = true

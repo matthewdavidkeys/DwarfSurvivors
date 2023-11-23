@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://b28otrir8ji1u"]
+
+[ext_resource type="Texture2D" uid="uid://bqxgdxbb6kj76" path="res://Assets/Sprites/y5w2xwP.png" id="1_3xsg5"]
+[ext_resource type="PackedScene" uid="uid://cyioae0t0ys65" path="res://Actors/Player/player.tscn" id="1_ok5rc"]
+[ext_resource type="Texture2D" uid="uid://cr506xvrnilhw" path="res://Assets/Sprites/images.jpeg" id="1_u1trh"]
+[ext_resource type="PackedScene" uid="uid://drxsoajvxbs6b" path="res://Actors/Enemies/EnemyRock.tscn" id="2_41pod"]
+[ext_resource type="PackedScene" uid="uid://ccgalmnq60bh8" path="res://Components/Weapons/Pistol.tscn" id="4_f5oln"]
+[ext_resource type="PackedScene" uid="uid://dwgp7838jou4m" path="res://Components/Weapons/Shotgun.tscn" id="5_cvnjs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g04wu"]
+radius = 1600.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvtrn"]
+radius = 300.0
+
+[node name="main" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -176.0
+offset_top = -180.0
+offset_right = 1312.0
+offset_bottom = 777.0
+texture = ExtResource("1_u1trh")
+
+[node name="CaveFloor" type="TextureRect" parent="."]
+offset_left = -136.0
+offset_top = -143.0
+offset_right = 1273.0
+offset_bottom = 743.0
+texture = ExtResource("1_3xsg5")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("1_ok5rc")]
+collision_mask = 5
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.2, 1.2)
+limit_left = -160
+limit_top = -170
+limit_right = 1300
+limit_bottom = 770
+editor_draw_limits = true
+
+[node name="Pistol" parent="Player" instance=ExtResource("4_f5oln")]
+position = Vector2(56, -7)
+scale = Vector2(0.2, 0.2)
+
+[node name="TargetSelector" parent="Player/Pistol" index="0"]
+position = Vector2(0, 0)
+
+[node name="Area2D" parent="Player/Pistol/TargetSelector" index="0"]
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="Player/Pistol/TargetSelector/Area2D" index="0"]
+shape = SubResource("CircleShape2D_g04wu")
+
+[node name="Shotgun" parent="Player" instance=ExtResource("5_cvnjs")]
+position = Vector2(-44, 1)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" parent="Player/Shotgun/TargetSelector/Area2D" index="0"]
+shape = SubResource("CircleShape2D_yvtrn")
+
+[node name="Sprite2D" parent="Player/Shotgun" index="1"]
+scale = Vector2(0.281377, 0.281377)
+
+[node name="EnemyRock" parent="." instance=ExtResource("2_41pod")]
+position = Vector2(88, -7)
+
+[node name="VelocityComponent" parent="EnemyRock" index="3"]
+max_speed = 100
+
+[node name="EnemyRock2" parent="." instance=ExtResource("2_41pod")]
+position = Vector2(-16, 459)
+
+[node name="VelocityComponent" parent="EnemyRock2" index="3"]
+max_speed = 170
+
+[node name="EnemyRock3" parent="." instance=ExtResource("2_41pod")]
+position = Vector2(1069, -43)
+
+[node name="VelocityComponent" parent="EnemyRock3" index="3"]
+max_speed = 240
+
+[editable path="Player/Pistol"]
+[editable path="Player/Shotgun"]
+[editable path="EnemyRock"]
+[editable path="EnemyRock2"]
+[editable path="EnemyRock3"]

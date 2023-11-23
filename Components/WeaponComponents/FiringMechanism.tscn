@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw8q0satjqx57"]
+
+[ext_resource type="Script" path="res://Components/WeaponComponents/FiringMechanism.gd" id="1_fbu5l"]
+
+[node name="FiringMechanism" type="Node2D"]
+script = ExtResource("1_fbu5l")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwgp7838jou4m"]
+
+[ext_resource type="Script" path="res://Components/Weapons/Shotgun.gd" id="1_2k0jb"]
+[ext_resource type="PackedScene" uid="uid://cxfwpk75dppv" path="res://Components/WeaponComponents/TargetSelector.tscn" id="2_pa23t"]
+[ext_resource type="Texture2D" uid="uid://c6dvuvmx7pbhl" path="res://Assets/Sprites/shotgun.png" id="3_od2e0"]
+
+[node name="Shotgun" type="Node2D"]
+script = ExtResource("1_2k0jb")
+
+[node name="TargetSelector" parent="." node_paths=PackedStringArray("rangeCollider") instance=ExtResource("2_pa23t")]
+rangeCollider = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="TargetSelector"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetSelector/Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_od2e0")
