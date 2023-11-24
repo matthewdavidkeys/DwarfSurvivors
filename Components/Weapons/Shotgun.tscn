@@ -7,6 +7,7 @@
 
 [node name="Shotgun" type="Node2D"]
 script = ExtResource("1_2k0jb")
+fire_delay = 1.1
 
 [node name="TargetSelector" parent="." node_paths=PackedStringArray("rangeCollider") instance=ExtResource("2_pa23t")]
 rangeCollider = NodePath("Area2D")

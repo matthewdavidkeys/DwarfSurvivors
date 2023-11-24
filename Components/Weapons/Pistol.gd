@@ -21,4 +21,5 @@ func _process(delta):
 		sprite.look_at(targetSelector.direction)
 		if (fireDelayTimer.is_stopped()):
 			fireDelayTimer.start(fire_delay)
-			projectileShooter.shoot_at(targetSelector.direction)
+			var direction = (targetSelector.direction - global_position).normalized()
+			projectileShooter.shoot_at(direction)

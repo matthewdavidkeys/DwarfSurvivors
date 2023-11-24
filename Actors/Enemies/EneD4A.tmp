@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://drxsoajvxbs6b"]
+
+[ext_resource type="Script" path="res://Actors/Enemies/EnemyRock.gd" id="1_qqsx7"]
+[ext_resource type="Texture2D" uid="uid://dvheds8tmiqmv" path="res://Assets/Sprites/New Piskel.png" id="2_l1tyh"]
+[ext_resource type="PackedScene" uid="uid://lu7dqf4rpsgj" path="res://Components/PathfindComponent.tscn" id="3_1q5va"]
+[ext_resource type="PackedScene" uid="uid://b54dfnxd2mpbu" path="res://Components/VelocityComponent.tscn" id="4_cqpvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eck8w"]
+size = Vector2(48, 49)
+
+[node name="EnemyRock" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+script = ExtResource("1_qqsx7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.90735e-06, -9.43897)
+scale = Vector2(6, 6)
+texture = ExtResource("2_l1tyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_eck8w")
+
+[node name="PathfindComponent" parent="." instance=ExtResource("3_1q5va")]
+velocity_component = Object(Node2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(0, 0),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"script":Resource("res://Components/VelocityComponent.gd"),"max_speed":150,"accel_coef":10)
+
+
+[node name="VelocityComponent" parent="." instance=ExtResource("4_cqpvr")]

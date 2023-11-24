@@ -12,7 +12,7 @@ func _ready():
 	sprite = get_node("Sprite2D")
 	projectileShooter = get_node("ProjectileShooter")
 
-func _process(delta):
+func _physics_process(delta):
 	#target nearest enemy
 	targetSelector.select_and_track()
 	
@@ -20,15 +20,14 @@ func _process(delta):
 	if (targetSelector.target):
 		sprite.look_at(targetSelector.direction)
 		#direction of enemy
-		var direction = targetSelector.direction
+		var direction = (targetSelector.direction - global_position).normalized()
 		var angle_offset = 0.2
 		if (fireDelayTimer.is_stopped()):
-			var angle = atan2(direction.y, direction.x)
-			print(angle)
-			print("OFFSET:")
-			print(angle + angle_offset)
 			fireDelayTimer.start(fire_delay)
 			#1st bullet - middle
 			projectileShooter.shoot_at(direction)
 			#2nd bullet - top
 			projectileShooter.shoot_at(direction.rotated(angle_offset))
+			#3rd bullet - bottom
+			projectileShooter.shoot_at(direction.rotated(-angle_offset))
+		

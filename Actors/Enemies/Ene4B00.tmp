@@ -1,21 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://drxsoajvxbs6b"]
+[gd_scene load_steps=6 format=3 uid="uid://drxsoajvxbs6b"]
 
 [ext_resource type="Script" path="res://Actors/Enemies/EnemyRock.gd" id="1_qqsx7"]
 [ext_resource type="Texture2D" uid="uid://dvheds8tmiqmv" path="res://Assets/Sprites/New Piskel.png" id="2_l1tyh"]
 [ext_resource type="PackedScene" uid="uid://lu7dqf4rpsgj" path="res://Components/PathfindComponent.tscn" id="3_1q5va"]
 [ext_resource type="PackedScene" uid="uid://b54dfnxd2mpbu" path="res://Components/VelocityComponent.tscn" id="4_cqpvr"]
-[ext_resource type="PackedScene" uid="uid://dpajntj17fau4" path="res://Components/HurtboxComponent.tscn" id="5_js566"]
-[ext_resource type="PackedScene" uid="uid://bunrxgg75mun6" path="res://Components/HealthComponent.tscn" id="6_sd5ax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eck8w"]
 size = Vector2(48, 49)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_442o3"]
-size = Vector2(50, 51)
-
 [node name="EnemyRock" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 4
-collision_mask = 3
 script = ExtResource("1_qqsx7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -32,13 +26,3 @@ shape = SubResource("RectangleShape2D_eck8w")
 velocity_component = NodePath("../VelocityComponent")
 
 [node name="VelocityComponent" parent="." instance=ExtResource("4_cqpvr")]
-
-[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("5_js566")]
-collision_mask = 8
-healthComponent = NodePath("../HealthComponent")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
-position = Vector2(0, -9.5)
-shape = SubResource("RectangleShape2D_442o3")
-
-[node name="HealthComponent" parent="." instance=ExtResource("6_sd5ax")]

@@ -2,7 +2,7 @@ extends Node2D
 class_name PathfindComponent
 
 var selected_target: CharacterBody2D
-@export var velocity_component: VelocityComponent
+@export var velocity_component : VelocityComponent
 
 # select the target given
 func select_target(target: CharacterBody2D):

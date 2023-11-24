@@ -9,6 +9,7 @@
 
 [node name="Pistol" type="Node2D"]
 script = ExtResource("1_tm8yi")
+fire_delay = 0.4
 
 [node name="TargetSelector" parent="." node_paths=PackedStringArray("rangeCollider") instance=ExtResource("1_3ojhl")]
 position = Vector2(1015.76, 335.857)
@@ -26,3 +27,4 @@ texture = ExtResource("2_r88s1")
 [node name="ProjectileShooter" parent="." instance=ExtResource("6_c3wbs")]
 
 [node name="FireDelayTimer" type="Timer" parent="."]
+one_shot = true
