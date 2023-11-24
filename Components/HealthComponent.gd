@@ -5,6 +5,8 @@ class_name HealthComponent
 
 var current_health = max_health : set = _set_current_health
 
+signal health_zero
+
 func _set_current_health(value : float):
 	current_health = value
 	
@@ -12,6 +14,7 @@ func _set_current_health(value : float):
 	
 	#if zero hp
 	if current_health <= 0:
+		emit_signal("health_zero")
 		print("DEAD")
 
 func damage(damage : float):
