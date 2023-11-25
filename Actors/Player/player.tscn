@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyioae0t0ys65"]
+[gd_scene load_steps=7 format=3 uid="uid://cyioae0t0ys65"]
 
 [ext_resource type="Script" path="res://Actors/Player/Player.gd" id="1_bfl67"]
 [ext_resource type="Texture2D" uid="uid://c37ywel4jbsll" path="res://Assets/Sprites/Dwarf.png" id="2_hkycq"]
+[ext_resource type="PackedScene" uid="uid://bunrxgg75mun6" path="res://Components/HealthComponent.tscn" id="3_f8w6m"]
+[ext_resource type="PackedScene" uid="uid://dpajntj17fau4" path="res://Components/HurtboxComponent.tscn" id="4_qo1gi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed7fc"]
 size = Vector2(67, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x51ws"]
+size = Vector2(71, 70)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(493, 208)
@@ -20,3 +25,15 @@ texture = ExtResource("2_hkycq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_ed7fc")
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_f8w6m")]
+max_health = 20.0
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("healthComponent") instance=ExtResource("4_qo1gi")]
+collision_layer = 0
+collision_mask = 4
+healthComponent = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_x51ws")

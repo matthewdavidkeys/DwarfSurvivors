@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://e463b30imxct"]
+
+[ext_resource type="Script" path="res://Components/MeleeComponent.gd" id="1_k0kt3"]
+
+[node name="MeleeComponent" type="Area2D"]
+script = ExtResource("1_k0kt3")

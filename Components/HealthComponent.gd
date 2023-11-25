@@ -15,7 +15,6 @@ func _set_current_health(value : float):
 	#if zero hp
 	if current_health <= 0:
 		emit_signal("health_zero")
-		print("DEAD")
 
 func damage(damage : float):
 	current_health -= damage
