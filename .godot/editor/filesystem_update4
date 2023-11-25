@@ -1,7 +1,2 @@
-res://Components/WeaponComponents/Bullet.tscn
-res://Components/HealthComponent.tscn
 res://Components/HurtboxComponent.tscn
-res://Actors/Enemies/EnemyRock.tscn
-res://Worlds/main.tscn
-res://Actors/Player/player.tscn
-res://Components/HitboxComponent.tscn
+res://Components/HurtboxComponent.gd

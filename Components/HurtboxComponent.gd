@@ -12,6 +12,9 @@ func handleBulletCollision(bullet: Bullet) -> void:
 	
 func handleDamage(damage: float):
 	healthComponent.damage(damage)
+	
+func handleHitboxCollision(hitbox: HitboxComponent) -> void:
+	print("HITBOX HIT")
 
 func _on_area_entered(area : Area2D):
 	if area is HitboxComponent:
