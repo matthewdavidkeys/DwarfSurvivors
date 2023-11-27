@@ -1,26 +1,21 @@
 extends CharacterBody2D
 
-var pathfindComponent: PathfindComponent
-var velocityComponent: VelocityComponent
-var healthComponent: HealthComponent
+@onready var pathfindComponent: PathfindComponent = get_node("PathfindComponent")
+@onready var velocityComponent: VelocityComponent = get_node("VelocityComponent")
+@onready var healthComponent: HealthComponent = get_node("HealthComponent")
 
 var target
 
 func _ready():
-	pathfindComponent = get_node("PathfindComponent")
-	velocityComponent = get_node("VelocityComponent")
-	healthComponent = get_node("HealthComponent")
+	#===CONNECT SIGNALS===#
+	#health zero -> kill enemy
+	healthComponent.health_zero.connect(die)
 	
 	#target player 
 	var targets: Array = get_tree().get_nodes_in_group("Player")
 	if targets.size() > 0:
 		target = targets[0]
 	pathfindComponent.select_target(target)
-	
-	### connect signals ###
-	
-	#health zero -> kill enemy
-	healthComponent.health_zero.connect(die)
 
 func _physics_process(delta):
 	pathfindComponent.follow_target()

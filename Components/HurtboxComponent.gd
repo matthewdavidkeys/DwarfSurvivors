@@ -18,4 +18,4 @@ func handleHitboxCollision(hitbox: HitboxComponent) -> void:
 
 func _on_area_entered(area : Area2D):
 	if area is HitboxComponent:
-		print("HITBOX HIT")
+		print("other side")

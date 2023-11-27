@@ -81,6 +81,7 @@ position = Vector2(1069, -43)
 [node name="VelocityComponent" parent="EnemyRock3" index="3"]
 max_speed = 240
 
+[editable path="Player"]
 [editable path="Player/Pistol"]
 [editable path="Player/Shotgun"]
 [editable path="EnemyRock"]
