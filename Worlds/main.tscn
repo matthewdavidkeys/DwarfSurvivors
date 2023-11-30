@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b28otrir8ji1u"]
+[gd_scene load_steps=12 format=3 uid="uid://b28otrir8ji1u"]
 
 [ext_resource type="Texture2D" uid="uid://bqxgdxbb6kj76" path="res://Assets/Sprites/y5w2xwP.png" id="1_3xsg5"]
 [ext_resource type="PackedScene" uid="uid://cyioae0t0ys65" path="res://Actors/Player/player.tscn" id="1_ok5rc"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://drxsoajvxbs6b" path="res://Actors/Enemies/EnemyRock.tscn" id="2_41pod"]
 [ext_resource type="PackedScene" uid="uid://ccgalmnq60bh8" path="res://Components/Weapons/Pistol.tscn" id="4_f5oln"]
 [ext_resource type="PackedScene" uid="uid://dwgp7838jou4m" path="res://Components/Weapons/Shotgun.tscn" id="5_cvnjs"]
+[ext_resource type="Texture2D" uid="uid://2sg0m3pcbfmg" path="res://Assets/Sprites/healthbarUnder.png" id="7_5cs0u"]
+[ext_resource type="Script" path="res://Worlds/HealthBar.gd" id="7_t05gd"]
+[ext_resource type="Texture2D" uid="uid://r25mw503uyj7" path="res://Assets/Sprites/healthbarProgress.png" id="8_tnqxu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g04wu"]
 radius = 1600.0
@@ -43,6 +46,7 @@ editor_draw_limits = true
 [node name="Pistol" parent="Player" instance=ExtResource("4_f5oln")]
 position = Vector2(56, -7)
 scale = Vector2(0.2, 0.2)
+fire_delay = 10000.0
 
 [node name="TargetSelector" parent="Player/Pistol" index="0"]
 position = Vector2(0, 0)
@@ -55,6 +59,7 @@ shape = SubResource("CircleShape2D_g04wu")
 
 [node name="Shotgun" parent="Player" instance=ExtResource("5_cvnjs")]
 position = Vector2(-44, 1)
+fire_delay = 100000.0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" parent="Player/Shotgun/TargetSelector/Area2D" index="0"]
@@ -80,6 +85,19 @@ position = Vector2(1069, -43)
 
 [node name="VelocityComponent" parent="EnemyRock3" index="3"]
 max_speed = 240
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 157.0
+offset_bottom = 33.0
+nine_patch_stretch = true
+texture_under = ExtResource("7_5cs0u")
+texture_progress = ExtResource("8_tnqxu")
+script = ExtResource("7_t05gd")
+player = NodePath("../../Player")
 
 [editable path="Player"]
 [editable path="Player/Pistol"]

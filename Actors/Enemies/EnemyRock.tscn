@@ -52,3 +52,6 @@ collision_layer = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(0, -9.5)
 shape = SubResource("RectangleShape2D_x3yh7")
+
+[node name="DamageTimer" type="Timer" parent="."]
+one_shot = true

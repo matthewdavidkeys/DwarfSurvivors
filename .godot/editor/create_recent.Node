@@ -1,8 +1,11 @@
+TextureProgressBar
+CanvasLayer
+ProgressBar
+Timer
 CollisionShape2D
 Area2D
 HealthComponent
 CharacterBody2D
-Timer
 Sprite2D
 Camera2D
 TextureRect
