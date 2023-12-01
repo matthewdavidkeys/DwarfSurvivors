@@ -18,7 +18,6 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-	position = position.clamp(Vector2.ZERO, screen_size)
 	
 func health_zero():
 	#TODO: Add animation and "game over"

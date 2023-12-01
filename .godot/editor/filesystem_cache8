@@ -1,17 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701332513
+::res://::1701432114
 README.md::TextFile::-1::1700752813::0::1::::<><>::
 ::res://Actors/::1700416888
-::res://Actors/Enemies/::1701336622
+::res://Actors/Enemies/::1701434273
 EnemyRock.gd::GDScript::-1::1701336622::0::1::::<>CharacterBody2D<>::
-EnemyRock.tscn::PackedScene::8401071003141873983::1701335314::0::1::::<><>::res://Actors/Enemies/EnemyRock.gd<>uid://dvheds8tmiqmv::::res://Assets/Sprites/New Piskel.png<>uid://lu7dqf4rpsgj::::res://Components/PathfindComponent.tscn<>uid://b54dfnxd2mpbu::::res://Components/VelocityComponent.tscn<>uid://dpajntj17fau4::::res://Components/HurtboxComponent.tscn<>uid://bunrxgg75mun6::::res://Components/HealthComponent.tscn<>uid://baqsxich64mow::::res://Components/HitboxComponent.tscn
-::res://Actors/Player/::1701335737
-Player.gd::GDScript::-1::1701335725::0::1::::Player<>CharacterBody2D<>::
+EnemyRock.tscn::PackedScene::8401071003141873983::1701434273::0::1::::<><>::res://Actors/Enemies/EnemyRock.gd<>uid://dvheds8tmiqmv::::res://Assets/Sprites/New Piskel.png<>uid://lu7dqf4rpsgj::::res://Components/PathfindComponent.tscn<>uid://b54dfnxd2mpbu::::res://Components/VelocityComponent.tscn<>uid://dpajntj17fau4::::res://Components/HurtboxComponent.tscn<>uid://bunrxgg75mun6::::res://Components/HealthComponent.tscn<>uid://baqsxich64mow::::res://Components/HitboxComponent.tscn
+::res://Actors/Player/::1701433674
+Player.gd::GDScript::-1::1701433674::0::1::::Player<>CharacterBody2D<>::
 player.tscn::PackedScene::6474738924241345652::1701335737::0::1::::<><>::res://Actors/Player/Player.gd<>uid://c37ywel4jbsll::::res://Assets/Sprites/Dwarf.png<>uid://bunrxgg75mun6::::res://Components/HealthComponent.tscn<>uid://dpajntj17fau4::::res://Components/HurtboxComponent.tscn
 ::res://Assets/::1700470114
-::res://Assets/Sprites/::1701337532
+::res://Assets/Sprites/::1701432965
 bullet.png::CompressedTexture2D::1993507163405697505::1700470111::1700470114::1::::<><>::
 bullet_dot.png::CompressedTexture2D::2819027703701958206::1700482294::1700482294::1::::<><>::
+cave.png::CompressedTexture2D::6610940367885573145::1701432964::1701434305::1::::<><>::
 Dwarf.png::CompressedTexture2D::6805685801089288513::1700750149::1700750149::1::::<><>::
 enemy.png::CompressedTexture2D::515621799085948456::1700417521::1700424133::1::::<><>::
 healthbarProgress.png::CompressedTexture2D::1250792683547969970::1701337529::1701337529::1::::<><>::
@@ -49,6 +50,6 @@ Pistol.gd::GDScript::-1::1700822135::0::1::::<>Node2D<>::
 Pistol.tscn::PackedScene::4925625616051615755::1701335314::0::1::::<><>::uid://cxfwpk75dppv::::res://Components/WeaponComponents/TargetSelector.tscn<>res://Components/Weapons/Pistol.gd<>uid://cor6pu31f6bg4::::res://Assets/Sprites/pistol.png<>uid://cyp07sh6xsb7x::::res://Components/WeaponComponents/ProjectileShooter.tscn
 Shotgun.gd::GDScript::-1::1700822227::0::1::::<>Node2D<>::
 Shotgun.tscn::PackedScene::8716772555973876694::1700822523::0::1::::<><>::res://Components/Weapons/Shotgun.gd<>uid://cxfwpk75dppv
-::res://Worlds/::1701337514
-main.tscn::PackedScene::4350528801859124512::1701337514::0::1::::<><>::uid://bqxgdxbb6kj76::::res://Assets/Sprites/y5w2xwP.png<>uid://cyioae0t0ys65::::res://Actors/Player/player.tscn<>uid://cr506xvrnilhw::::res://Assets/Sprites/images.jpeg<>uid://drxsoajvxbs6b::::res://Actors/Enemies/EnemyRock.tscn<>uid://ccgalmnq60bh8::::res://Components/Weapons/Pistol.tscn<>uid://dwgp7838jou4m::::res://Components/Weapons/Shotgun.tscn<>res://Worlds/HealthBar.gd
-HealthBar.gd::GDScript::-1::1701337129::0::1::::<>ProgressBar<>::
+::res://Worlds/::1701434273
+HealthBar.gd::GDScript::-1::1701337798::0::1::::<>TextureProgressBar<>::
+main.tscn::PackedScene::4350528801859124512::1701434273::0::1::::<><>::uid://cyioae0t0ys65::::res://Actors/Player/player.tscn<>uid://c1gnhsvbmfhun::::res://Assets/Sprites/cave.png<>uid://drxsoajvxbs6b::::res://Actors/Enemies/EnemyRock.tscn<>uid://ccgalmnq60bh8::::res://Components/Weapons/Pistol.tscn<>uid://dwgp7838jou4m::::res://Components/Weapons/Shotgun.tscn<>uid://2sg0m3pcbfmg::::res://Assets/Sprites/healthbarUnder.png<>res://Worlds/HealthBar.gd<>uid://r25mw503uyj7::::res://Assets/Sprites/healthbarProgress.png

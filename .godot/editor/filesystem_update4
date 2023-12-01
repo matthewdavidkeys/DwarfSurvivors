@@ -1,12 +1,3 @@
-res://Components/HitboxComponent.tscn
-res://Components/HitboxComponent.gd
-res://Actors/Enemies/EnemyRock.tscn
-res://Actors/Enemies/EnemyRock.gd
-res://Actors/Player/player.tscn
 res://Worlds/main.tscn
-res://Components/VelocityComponent.tscn
+res://Actors/Enemies/EnemyRock.tscn
 res://Actors/Player/Player.gd
-res://Components/Weapons/Pistol.tscn
-res://Worlds/HealthBar.gd
-res://Components/HealthComponent.gd
-res://Components/HurtboxComponent.gd
