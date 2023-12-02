@@ -1,13 +1,9 @@
 res://Worlds/main.tscn
 res://Actors/Enemies/EnemyRock.tscn
 res://Components/EnemySpawner.tscn
-res://Components/EnemySpawner.gd
 res://Components/WaveManager.tscn
-res://Components/WaveManager.gd
 res://Components/Weapons/Shotgun.tscn
 res://Components/WeaponComponents/Bullet.tscn
 res://Components/Weapons/Pistol.tscn
-res://Components/WeaponComponents/Bullet.gd
-res://Components/HurtboxComponent.gd
 res://Components/HurtboxComponent.tscn
-res://Components/Weapons/Shotgun.gd
+res://Components/WeaponComponents/Bullet.gd

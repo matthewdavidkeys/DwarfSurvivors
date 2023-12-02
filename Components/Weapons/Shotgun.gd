@@ -6,7 +6,7 @@ var projectileShooter: ProjectileShooter
 
 @onready var fireDelayTimer := $FireDelayTimer
 @export var fire_delay: float = 0.6
-@export var angle_offset = 0.7
+@export var angle_offset = 0.2
 
 func _ready():
 	targetSelector = get_node("TargetSelector")

@@ -14,4 +14,12 @@ func _process(delta):
 func _on_Bullet_area_entered(area : Area2D):
 	if area is HurtboxComponent:
 		area.handleBulletCollision(self)
-		queue_free()
+		bullet_delete()
+
+func _on_Bullet_body_entered(body):
+	#hit wall
+	if body is TileMap:
+		bullet_delete()
+
+func bullet_delete():
+	queue_free()
