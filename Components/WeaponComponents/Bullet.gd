@@ -5,6 +5,9 @@ var speed := 200
 var direction = Vector2.ZERO
 var damage
 
+func _ready():
+	self.area_entered.connect(_on_Bullet_area_entered)
+
 func _process(delta):
 	position += direction * speed * delta
 

@@ -20,6 +20,7 @@ rangeCollider = NodePath("Area2D")
 texture = ExtResource("3_od2e0")
 
 [node name="ProjectileShooter" parent="." instance=ExtResource("4_xk5gk")]
+bullet_speed = 50
 
 [node name="FireDelayTimer" type="Timer" parent="."]
 one_shot = true

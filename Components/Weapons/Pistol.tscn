@@ -25,6 +25,7 @@ shape = SubResource("RectangleShape2D_k2tm6")
 texture = ExtResource("2_r88s1")
 
 [node name="ProjectileShooter" parent="." instance=ExtResource("6_c3wbs")]
+bullet_speed = 50
 
 [node name="FireDelayTimer" type="Timer" parent="."]
 one_shot = true

@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701432114
+::res://::1701506507
 README.md::TextFile::-1::1700752813::0::1::::<><>::
 ::res://Actors/::1700416888
-::res://Actors/Enemies/::1701434273
+::res://Actors/Enemies/::1701436420
 EnemyRock.gd::GDScript::-1::1701336622::0::1::::<>CharacterBody2D<>::
-EnemyRock.tscn::PackedScene::8401071003141873983::1701434273::0::1::::<><>::res://Actors/Enemies/EnemyRock.gd<>uid://dvheds8tmiqmv::::res://Assets/Sprites/New Piskel.png<>uid://lu7dqf4rpsgj::::res://Components/PathfindComponent.tscn<>uid://b54dfnxd2mpbu::::res://Components/VelocityComponent.tscn<>uid://dpajntj17fau4::::res://Components/HurtboxComponent.tscn<>uid://bunrxgg75mun6::::res://Components/HealthComponent.tscn<>uid://baqsxich64mow::::res://Components/HitboxComponent.tscn
+EnemyRock.tscn::PackedScene::8401071003141873983::1701436420::0::1::::<><>::res://Actors/Enemies/EnemyRock.gd<>uid://dvheds8tmiqmv
 ::res://Actors/Player/::1701433674
 Player.gd::GDScript::-1::1701433674::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::6474738924241345652::1701335737::0::1::::<><>::res://Actors/Player/Player.gd<>uid://c37ywel4jbsll::::res://Assets/Sprites/Dwarf.png<>uid://bunrxgg75mun6::::res://Components/HealthComponent.tscn<>uid://dpajntj17fau4::::res://Components/HurtboxComponent.tscn
+player.tscn::PackedScene::6474738924241345652::1701335737::0::1::::<><>::res://Actors/Player/Player.gd<>uid://c37ywel4jbsll
 ::res://Assets/::1700470114
-::res://Assets/Sprites/::1701432965
+::res://Assets/Sprites/::1701434305
 bullet.png::CompressedTexture2D::1993507163405697505::1700470111::1700470114::1::::<><>::
 bullet_dot.png::CompressedTexture2D::2819027703701958206::1700482294::1700482294::1::::<><>::
 cave.png::CompressedTexture2D::6610940367885573145::1701432964::1701434305::1::::<><>::
@@ -23,7 +23,9 @@ New Piskel.png::CompressedTexture2D::8647927634387672973::1700750775::1700750775
 pistol.png::CompressedTexture2D::5792489708732754549::1700432969::1700432972::1::::<><>::
 shotgun.png::CompressedTexture2D::6956200548769953493::1700436404::1700436408::1::::<><>::
 y5w2xwP.png::CompressedTexture2D::3557293739252431651::1700424137::1700424137::1::::<><>::
-::res://Components/::1701337369
+::res://Components/::1701465481
+EnemySpawner.gd::GDScript::-1::1701465481::0::1::::<>Node2D<>::
+EnemySpawner.tscn::PackedScene::6150069591381189036::1701465481::0::1::::<><>::res://Components/EnemySpawner.gd
 HealthComponent.gd::GDScript::-1::1701337369::0::1::::HealthComponent<>Node2D<>::
 HealthComponent.tscn::PackedScene::3818108055296814569::1700918896::0::1::::<><>::res://Components/HealthComponent.gd
 HitboxComponent.gd::GDScript::-1::1701332868::0::1::::HitboxComponent<>Area2D<>::
@@ -36,6 +38,7 @@ PathfindComponent.gd::GDScript::-1::1700836199::0::1::::PathfindComponent<>Node2
 PathfindComponent.tscn::PackedScene::815313985688373253::1700824015::0::1::::<><>::res://Components/PathfindComponent.gd
 VelocityComponent.gd::GDScript::-1::1701272918::0::1::::VelocityComponent<>Node2D<>::
 VelocityComponent.tscn::PackedScene::4552144746156559778::1701335314::0::1::::<><>::res://Components/VelocityComponent.gd
+::res://Components/OtherComponents/::1701464854
 ::res://Components/WeaponComponents/::1700918896
 Bullet.gd::GDScript::-1::1700832339::0::1::::Bullet<>Area2D<>::
 Bullet.tscn::PackedScene::7110005460685769590::1700918896::0::1::::<><>::res://Components/WeaponComponents/Bullet.gd<>uid://bgfs8eonw0a8u
@@ -47,9 +50,9 @@ TargetSelector.gd::GDScript::-1::1700820725::0::1::::TargetSelector<>Node2D<>::
 TargetSelector.tscn::PackedScene::188202052841635399::1700473212::0::1::::<><>::res://Components/WeaponComponents/TargetSelector.gd
 ::res://Components/Weapons/::1701335314
 Pistol.gd::GDScript::-1::1700822135::0::1::::<>Node2D<>::
-Pistol.tscn::PackedScene::4925625616051615755::1701335314::0::1::::<><>::uid://cxfwpk75dppv::::res://Components/WeaponComponents/TargetSelector.tscn<>res://Components/Weapons/Pistol.gd<>uid://cor6pu31f6bg4::::res://Assets/Sprites/pistol.png<>uid://cyp07sh6xsb7x::::res://Components/WeaponComponents/ProjectileShooter.tscn
+Pistol.tscn::PackedScene::4925625616051615755::1701335314::0::1::::<><>::uid://cxfwpk75dppv
 Shotgun.gd::GDScript::-1::1700822227::0::1::::<>Node2D<>::
 Shotgun.tscn::PackedScene::8716772555973876694::1700822523::0::1::::<><>::res://Components/Weapons/Shotgun.gd<>uid://cxfwpk75dppv
-::res://Worlds/::1701434273
+::res://Worlds/::1701436448
 HealthBar.gd::GDScript::-1::1701337798::0::1::::<>TextureProgressBar<>::
-main.tscn::PackedScene::4350528801859124512::1701434273::0::1::::<><>::uid://cyioae0t0ys65::::res://Actors/Player/player.tscn<>uid://c1gnhsvbmfhun::::res://Assets/Sprites/cave.png<>uid://drxsoajvxbs6b::::res://Actors/Enemies/EnemyRock.tscn<>uid://ccgalmnq60bh8::::res://Components/Weapons/Pistol.tscn<>uid://dwgp7838jou4m::::res://Components/Weapons/Shotgun.tscn<>uid://2sg0m3pcbfmg::::res://Assets/Sprites/healthbarUnder.png<>res://Worlds/HealthBar.gd<>uid://r25mw503uyj7::::res://Assets/Sprites/healthbarProgress.png
+main.tscn::PackedScene::4350528801859124512::1701436448::0::1::::<><>::uid://cyioae0t0ys65

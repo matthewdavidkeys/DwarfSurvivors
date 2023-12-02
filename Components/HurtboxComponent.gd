@@ -6,6 +6,7 @@ class_name HurtboxComponent
 func handleBulletCollision(bullet: Bullet) -> void:
 	var damage = bullet.damage
 	handleDamage(damage)
+	bullet.queue_free()
 	
 func handleDamage(damage: float):
 	healthComponent.damage(damage)

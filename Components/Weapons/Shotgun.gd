@@ -6,6 +6,7 @@ var projectileShooter: ProjectileShooter
 
 @onready var fireDelayTimer := $FireDelayTimer
 @export var fire_delay: float = 0.6
+@export var angle_offset = 0.7
 
 func _ready():
 	targetSelector = get_node("TargetSelector")
@@ -21,7 +22,6 @@ func _physics_process(delta):
 		sprite.look_at(targetSelector.direction)
 		#direction of enemy
 		var direction = (targetSelector.direction - global_position).normalized()
-		var angle_offset = 0.2
 		if (fireDelayTimer.is_stopped()):
 			fireDelayTimer.start(fire_delay)
 			#1st bullet - middle

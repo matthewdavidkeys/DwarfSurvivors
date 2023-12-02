@@ -1,12 +1,14 @@
+Area2D
+CharacterBody2D
+ReferenceRect
+Node2D
+Timer
 TileMap
 TextureProgressBar
 CanvasLayer
 ProgressBar
-Timer
 CollisionShape2D
-Area2D
 HealthComponent
-CharacterBody2D
 Sprite2D
 Camera2D
 TextureRect
