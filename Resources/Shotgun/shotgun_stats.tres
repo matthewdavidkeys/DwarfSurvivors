@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ShotgunStats" load_steps=2 format=3 uid="uid://3jkitksgapl2"]
+
+[ext_resource type="Script" path="res://Resources/Shotgun/ShotgunStats.gd" id="1_gkuw8"]
+
+[resource]
+script = ExtResource("1_gkuw8")
+fire_delay = 1.1
+bullet_speed = 900.0
+bullet_damage = 3.0
+angle_offset = 0.2

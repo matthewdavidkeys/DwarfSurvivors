@@ -8,7 +8,7 @@ var damage
 func _ready():
 	self.area_entered.connect(_on_Bullet_area_entered)
 
-func _process(delta):
+func _physics_process(delta):
 	position += direction * speed * delta
 
 func _on_Bullet_area_entered(area : Area2D):

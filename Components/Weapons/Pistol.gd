@@ -1,16 +1,15 @@
 extends Node2D
 
-var targetSelector: TargetSelector
-var sprite: Sprite2D
-var projectileShooter: ProjectileShooter
-
 @onready var fireDelayTimer := $FireDelayTimer
-@export var fire_delay: float = 0.6
+@onready var targetSelector = $TargetSelector
+@onready var sprite = $Sprite2D
+@onready var projectileShooter = $ProjectileShooter
+
+@export var stats : Resource
+var fire_delay: float
 
 func _ready():
-	targetSelector = get_node("TargetSelector")
-	sprite = get_node("Sprite2D")
-	projectileShooter = get_node("ProjectileShooter")
+	fire_delay = stats.fire_delay
 
 func _process(delta):
 	#target nearest enemy

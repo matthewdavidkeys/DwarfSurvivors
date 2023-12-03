@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccgalmnq60bh8"]
+[gd_scene load_steps=7 format=3 uid="uid://ccgalmnq60bh8"]
 
 [ext_resource type="PackedScene" uid="uid://cxfwpk75dppv" path="res://Components/WeaponComponents/TargetSelector.tscn" id="1_3ojhl"]
 [ext_resource type="Script" path="res://Components/Weapons/Pistol.gd" id="1_tm8yi"]
+[ext_resource type="Resource" uid="uid://8l1r4emy5nr4" path="res://Resources/Pistol/pistol_stats.tres" id="2_q7vda"]
 [ext_resource type="Texture2D" uid="uid://cor6pu31f6bg4" path="res://Assets/Sprites/pistol.png" id="2_r88s1"]
 [ext_resource type="PackedScene" uid="uid://cyp07sh6xsb7x" path="res://Components/WeaponComponents/ProjectileShooter.tscn" id="6_c3wbs"]
 
@@ -9,7 +10,7 @@
 
 [node name="Pistol" type="Node2D"]
 script = ExtResource("1_tm8yi")
-fire_delay = 0.4
+stats = ExtResource("2_q7vda")
 
 [node name="TargetSelector" parent="." node_paths=PackedStringArray("rangeCollider") instance=ExtResource("1_3ojhl")]
 position = Vector2(1015.76, 335.857)
@@ -25,7 +26,6 @@ shape = SubResource("RectangleShape2D_k2tm6")
 texture = ExtResource("2_r88s1")
 
 [node name="ProjectileShooter" parent="." instance=ExtResource("6_c3wbs")]
-bullet_speed = 50
 
 [node name="FireDelayTimer" type="Timer" parent="."]
 one_shot = true

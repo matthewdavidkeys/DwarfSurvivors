@@ -931,7 +931,6 @@ editor_draw_limits = true
 [node name="Pistol" parent="Player" instance=ExtResource("4_f5oln")]
 position = Vector2(56, -7)
 scale = Vector2(0.2, 0.2)
-fire_delay = 0.6
 
 [node name="TargetSelector" parent="Player/Pistol" index="0"]
 position = Vector2(0, 0)
@@ -942,10 +941,6 @@ position = Vector2(0, 0)
 [node name="CollisionShape2D" parent="Player/Pistol/TargetSelector/Area2D" index="0"]
 shape = SubResource("CircleShape2D_g04wu")
 
-[node name="ProjectileShooter" parent="Player/Pistol" index="2"]
-bullet_speed = 600
-bullet_damage = 5.0
-
 [node name="Shotgun" parent="Player" instance=ExtResource("5_cvnjs")]
 position = Vector2(-44, 1)
 metadata/_edit_group_ = true
@@ -955,10 +950,6 @@ shape = SubResource("CircleShape2D_yvtrn")
 
 [node name="Sprite2D" parent="Player/Shotgun" index="1"]
 scale = Vector2(0.281377, 0.281377)
-
-[node name="ProjectileShooter" parent="Player/Shotgun" index="2"]
-bullet_speed = 600
-bullet_damage = 4.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

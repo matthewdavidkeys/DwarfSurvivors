@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PistolStats" load_steps=2 format=3 uid="uid://8l1r4emy5nr4"]
+
+[ext_resource type="Script" path="res://Resources/Pistol/PistolStats.gd" id="1_kdpn8"]
+
+[resource]
+script = ExtResource("1_kdpn8")
+fire_delay = 0.6
+bullet_speed = 600.0
+bullet_damage = 3.0
