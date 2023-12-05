@@ -1,12 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b28otrir8ji1u"]
+[gd_scene load_steps=12 format=3 uid="uid://b28otrir8ji1u"]
 
 [ext_resource type="PackedScene" uid="uid://cyioae0t0ys65" path="res://Actors/Player/player.tscn" id="1_ok5rc"]
 [ext_resource type="Texture2D" uid="uid://c1gnhsvbmfhun" path="res://Assets/Sprites/cave.png" id="1_scvoy"]
 [ext_resource type="PackedScene" uid="uid://ccgalmnq60bh8" path="res://Components/Weapons/Pistol.tscn" id="4_f5oln"]
 [ext_resource type="PackedScene" uid="uid://dwgp7838jou4m" path="res://Components/Weapons/Shotgun.tscn" id="5_cvnjs"]
-[ext_resource type="Texture2D" uid="uid://2sg0m3pcbfmg" path="res://Assets/Sprites/healthbarUnder.png" id="7_5cs0u"]
-[ext_resource type="Script" path="res://Worlds/HealthBar.gd" id="7_t05gd"]
-[ext_resource type="Texture2D" uid="uid://r25mw503uyj7" path="res://Assets/Sprites/healthbarProgress.png" id="8_tnqxu"]
+[ext_resource type="PackedScene" uid="uid://od07bdbpcb7d" path="res://HUD/HUD.tscn" id="7_u3six"]
 [ext_resource type="PackedScene" uid="uid://ctve0oi80h8b5" path="res://Components/EnemySpawner.tscn" id="9_6tm7n"]
 [ext_resource type="PackedScene" uid="uid://bvt72xfhtdyhh" path="res://Components/WaveManager.tscn" id="9_jsho7"]
 
@@ -951,22 +949,13 @@ shape = SubResource("CircleShape2D_yvtrn")
 [node name="Sprite2D" parent="Player/Shotgun" index="1"]
 scale = Vector2(0.281377, 0.281377)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
-offset_left = 16.0
-offset_top = 9.0
-offset_right = 162.0
-offset_bottom = 35.0
-nine_patch_stretch = true
-texture_under = ExtResource("7_5cs0u")
-texture_progress = ExtResource("8_tnqxu")
-script = ExtResource("7_t05gd")
-player = NodePath("../../Player")
-
 [node name="WaveManager" parent="." instance=ExtResource("9_jsho7")]
 
 [node name="EnemySpawner" parent="WaveManager" instance=ExtResource("9_6tm7n")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("7_u3six")]
 
 [editable path="Player"]
 [editable path="Player/Pistol"]

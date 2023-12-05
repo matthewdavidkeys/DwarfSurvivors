@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://od07bdbpcb7d"]
+
+[ext_resource type="Script" path="res://HUD/HUD.gd" id="1_cp1vk"]
+[ext_resource type="Texture2D" uid="uid://2sg0m3pcbfmg" path="res://Assets/Sprites/healthbarUnder.png" id="1_qvplo"]
+[ext_resource type="Script" path="res://Worlds/HealthBar.gd" id="1_stcjm"]
+[ext_resource type="Texture2D" uid="uid://r25mw503uyj7" path="res://Assets/Sprites/healthbarProgress.png" id="2_2fa3h"]
+
+[sub_resource type="FontFile" id="FontFile_m268g"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6k1j"]
+font = SubResource("FontFile_m268g")
+shadow_size = 6
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_cp1vk")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_right = 210.0
+offset_bottom = 54.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_qvplo")
+texture_progress = ExtResource("2_2fa3h")
+script = ExtResource("1_stcjm")
+
+[node name="WaveLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_top = 16.0
+offset_right = 31.0
+offset_bottom = 79.0
+grow_horizontal = 2
+text = "Wave 1"
+label_settings = SubResource("LabelSettings_w6k1j")

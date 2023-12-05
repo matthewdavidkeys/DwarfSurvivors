@@ -7,3 +7,5 @@ script = ExtResource("1_bbr5n")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="WaveTimer" type="Timer" parent="."]

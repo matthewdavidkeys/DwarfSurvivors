@@ -9,10 +9,6 @@ func get_spawn_area():
 	var top_left = tileMap.map_to_local(array[0])
 	var bottom_right = tileMap.map_to_local(array[-1])
 	var size = bottom_right - top_left
-	print("pos:")
-	print(top_left)
-	print("size:")
-	print(size)
 	spawn_area = Rect2(top_left, size)
 
 func choose_random_spawn_location() -> Vector2:
@@ -24,5 +20,4 @@ func choose_random_spawn_location() -> Vector2:
 func spawn_enemy(location : Vector2, enemy : PackedScene):
 	var enemy_instance = enemy.instantiate()
 	enemy_instance.global_position = location
-	print(enemy_instance.global_position)
 	get_tree().get_root().add_child(enemy_instance)
