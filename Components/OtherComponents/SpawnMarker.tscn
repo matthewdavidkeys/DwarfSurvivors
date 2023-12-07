@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://drn535pm64nqt"]
+
+[ext_resource type="Texture2D" uid="uid://cdg6uq3r1otl5" path="res://Assets/Sprites/Cross.png" id="1_v6ak2"]
+
+[node name="SpawnMarker" type="TextureRect"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_v6ak2")

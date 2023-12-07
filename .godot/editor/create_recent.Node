@@ -1,3 +1,4 @@
+TextureRect
 Label
 TextureProgressBar
 ProgressBar
@@ -13,5 +14,4 @@ CollisionShape2D
 HealthComponent
 Sprite2D
 Camera2D
-TextureRect
 RigidBody2D

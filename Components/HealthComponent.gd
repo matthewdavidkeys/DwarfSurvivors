@@ -21,7 +21,6 @@ func _set_current_health(value : float):
 		emit_signal("health_zero")
 		
 	emit_signal("health_changed", current_health)
-	print("signal emitted", current_health)
 
 func damage(damage : float):
 	current_health -= damage

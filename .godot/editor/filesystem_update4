@@ -1,9 +1,11 @@
-res://HUD/HUD.tscn
-res://Worlds/HealthBar.gd
 res://Worlds/main.tscn
 res://Components/Weapons/Shotgun.tscn
 res://Components/WaveManager.tscn
 res://Components/EnemySpawner.tscn
-res://Components/HealthComponent.gd
+res://HUD/HUD.tscn
+res://Actors/Enemies/EnemyRock.tscn
+res://Actors/Enemies/EnemyRock.gd
 res://Components/WaveManager.gd
-res://HUD/HUD.gd
+res://Components/HealthComponent.gd
+res://Components/EnemySpawner.gd
+res://Components/OtherComponents/SpawnMarker.tscn

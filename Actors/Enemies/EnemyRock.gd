@@ -15,7 +15,7 @@ var in_hurtbox : bool = false
 func _ready():
 	#===CONNECT SIGNALS===#
 	#health zero -> kill enemy
-	healthComponent.health_zero.connect(health_zero)
+	healthComponent.health_zero.connect(die)
 	
 	#hit a hurtbox
 	hitboxComponent.hurtbox_hit.connect(hurtbox_hit)
@@ -40,7 +40,7 @@ func _physics_process(delta):
 			current_hurtbox.handleDamage(2)
 	
 #connected to trigger - enemy's health reached 0
-func health_zero():
+func die():
 	queue_free()
 	
 func hurtbox_hit(hurtbox : HurtboxComponent):
